@@ -40,6 +40,8 @@ android {
 dependencies {
     implementation(project(":core:context:impl"))
     implementation(project(":core:schedulers:impl"))
+    implementation(project(":feature:stock_list:data:api"))
+    implementation(project(":feature:stock_list:data:wiring"))
 
     kapt(libs.daggerCompiler)
 

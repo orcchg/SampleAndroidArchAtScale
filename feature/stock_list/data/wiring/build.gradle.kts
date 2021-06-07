@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -17,4 +18,14 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+
+dependencies {
+    implementation(project(":core:context:api"))
+    implementation(project(":core:schedulers:api"))
+    implementation(project(":feature:stock_list:data:fake")) // switch implementation of data layer
+
+    kapt(libs.daggerCompiler)
+
+    implementation(libs.dagger)
 }

@@ -21,4 +21,6 @@ android {
 
 dependencies {
     api(project(":feature:stock_list:data:api"))
+
+    implementation(libs.dagger)
 }
