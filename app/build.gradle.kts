@@ -33,6 +33,8 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    dynamicFeatures.add(":feature:stock_details:stock_details_main")
 }
 
 dependencies {
