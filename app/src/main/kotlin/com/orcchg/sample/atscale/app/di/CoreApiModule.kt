@@ -1,4 +1,4 @@
-package com.orcchg.sample.atscale.app
+package com.orcchg.sample.atscale.app.di
 
 import android.app.Application
 import com.orcchg.sample.atscale.core.context.api.ContextCoreLibApi

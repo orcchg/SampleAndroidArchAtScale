@@ -1,4 +1,4 @@
-package com.orcchg.sample.atscale.app
+package com.orcchg.sample.atscale.app.di
 
 import com.orcchg.sample.atscale.di.Api
 import com.orcchg.sample.atscale.di.get

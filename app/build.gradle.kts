@@ -39,6 +39,7 @@ android {
 
 dependencies {
     implementation(project(":core:context:impl"))
+    implementation(project(":core:di"))
     implementation(project(":core:schedulers:impl"))
     implementation(project(":feature:stock_list:data:wiring"))
     implementation(project(":feature:stock_list:impl"))
