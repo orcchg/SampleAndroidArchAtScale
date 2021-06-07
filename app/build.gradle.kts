@@ -48,9 +48,11 @@ dependencies {
     kapt(libs.daggerCompiler)
 
     implementation(libs.appCompat)
+    implementation(libs.appStartup)
     implementation(libs.coreKtx)
     implementation(libs.dagger)
     implementation(libs.material)
+    implementation(libs.timber)
     testImplementation(libs.junit)
     androidTestImplementation(libs.junitAndroidExt)
     androidTestImplementation(libs.espresso)
