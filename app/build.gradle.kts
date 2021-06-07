@@ -1,13 +1,14 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    id("kotlin-kapt")
 }
 
 android {
     compileSdk = 30
 
     defaultConfig {
-        applicationId = "com.orcchg.sample.androidarchatscale"
+        applicationId = "com.orcchg.sample.atscale.app"
         minSdk = 23
         targetSdk = 30
         versionCode = 1
@@ -35,8 +36,11 @@ android {
 }
 
 dependencies {
+    kapt(libs.daggerCompiler)
+
     implementation(libs.appCompat)
     implementation(libs.coreKtx)
+    implementation(libs.dagger)
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.junitAndroidExt)
