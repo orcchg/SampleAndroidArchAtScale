@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -17,4 +18,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+
+dependencies {
+    api(project(":core:context:api"))
+
+    kapt(libs.daggerCompiler)
+
+    implementation(libs.dagger)
 }

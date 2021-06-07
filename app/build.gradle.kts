@@ -38,6 +38,9 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:context:impl"))
+    implementation(project(":core:schedulers:impl"))
+
     kapt(libs.daggerCompiler)
 
     implementation(libs.appCompat)
