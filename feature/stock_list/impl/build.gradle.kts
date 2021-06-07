@@ -5,4 +5,6 @@ plugins {
 
 dependencies {
     api(project(":feature:stock_list:api"))
+
+    implementation(project(":base"))
 }
