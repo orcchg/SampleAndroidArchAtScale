@@ -32,20 +32,4 @@ class StockListAdapter @Inject constructor(
     fun update(items: List<StockVO>) {
         submitList(items)
     }
-
-    @Suppress("unused")
-    fun update(
-        predicate: (StockVO) -> Boolean,
-        updateItem: (StockVO) -> StockVO,
-        updateList: ((StockVO) -> Unit)? = null
-    ) {
-        currentList.indexOfFirst(predicate)
-            .takeIf { it != -1 }
-            ?.let { pos ->
-                val oldItem = getItem(pos)
-                val newItem = updateItem(oldItem)
-                val newList = currentList.toMutableList().apply { set(pos, newItem) }
-                submitList(newList) { updateList?.invoke(newItem) }
-            }
-    }
 }
