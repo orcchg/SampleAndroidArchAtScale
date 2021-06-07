@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_stock_logo"
+        android:layout_width="@dimen/stock_icon_size"
+        android:layout_height="@dimen/stock_icon_size"
+        android:layout_marginTop="@dimen/keyline_2"
+        android:layout_marginStart="@dimen/keyline_2"
+        android:layout_marginBottom="@dimen/keyline_2"
+        android:contentDescription="@string/stock_accessibility_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/stock_ShapeAppearanceOverlay.MyTheme.StockIcon"
+        tools:src="@drawable/stock_yandex_logo" />
+
+    <TextView
+        android:id="@+id/tv_stock_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/keyline_3"
+        android:layout_marginEnd="@dimen/keyline_4"
+        android:gravity="center_vertical|end"
+        android:textAppearance="?textAppearanceHeadline5"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="@+id/tv_stock_ticker"
+        app:layout_constraintBottom_toTopOf="@+id/tv_stock_issuer"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="$72.16" />
+
+    <TextView
+        android:id="@+id/tv_stock_price_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/keyline_3"
+        android:layout_marginEnd="@dimen/keyline_4"
+        android:gravity="center_vertical|end"
+        android:textAppearance="?textAppearanceBody2"
+        android:textColor="@color/green"
+        app:layout_constraintTop_toBottomOf="@+id/tv_stock_ticker"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_stock_issuer"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="+$ 0.12 (1,15%)" />
+
+    <TextView
+        android:id="@+id/tv_stock_ticker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/keyline_3"
+        android:gravity="center_vertical|start"
+        android:textAppearance="?textAppearanceHeadline5"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_stock_issuer"
+        app:layout_constraintStart_toEndOf="@id/iv_stock_logo"
+        tools:text="YNDX" />
+
+    <TextView
+        android:id="@+id/tv_stock_issuer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/keyline_3"
+        android:layout_marginEnd="@dimen/keyline_2"
+        android:gravity="center_vertical|start"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintTop_toBottomOf="@id/tv_stock_ticker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_stock_logo"
+        app:layout_constraintEnd_toStartOf="@id/tv_stock_price_change"
+        tools:text="Yandex, LLC" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

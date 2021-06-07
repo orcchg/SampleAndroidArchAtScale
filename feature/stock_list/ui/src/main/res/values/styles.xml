@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="stock_ShapeAppearanceOverlay.MyTheme.StockIcon" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/keyline_3</item>
+    </style>
+</resources>

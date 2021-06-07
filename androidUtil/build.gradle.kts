@@ -10,6 +10,9 @@ android {
         minSdk = 23
         targetSdk = 30
     }
+    buildFeatures {
+        viewBinding = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -17,4 +20,14 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+
+dependencies {
+    implementation(libs.appCompat)
+    implementation(libs.bundles.rx)
+    implementation(libs.fragmentKtx)
+    implementation(libs.lifecycle)
+    implementation(libs.liveData)
+    implementation(libs.navigation)
+    implementation(libs.rxAndroid)
 }

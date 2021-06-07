@@ -42,15 +42,6 @@
         <item name="itemTextAppearance">?attr/textAppearanceBody2</item>
     </style>
 
-    <!--Recycler View-->
-    <style name="Widget.MyTheme.Shimmer" parent="">
-        <item name="shimmer_base_alpha">1</item>
-        <item name="shimmer_base_color">?colorHelperShimmer</item>
-        <item name="shimmer_colored">true</item>
-        <item name="shimmer_highlight_color">@color/white</item>
-        <item name="shimmer_width_ratio">1.3</item>
-    </style>
-
     <!-- TabLayout View-->
     <style name="Widget.MyTheme.TabLayout" parent="Widget.MaterialComponents.TabLayout">
         <item name="tabGravity">start</item>

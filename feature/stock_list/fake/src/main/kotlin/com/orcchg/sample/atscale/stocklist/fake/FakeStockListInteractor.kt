@@ -52,9 +52,19 @@ class FakeStockListInteractor @Inject constructor() : StockListInteractor {
                     price = 519.21.money()
                 ),
                 Stock(
-                    name = "Facebook",
-                    ticker = "FB",
+                    name = "Appfolio Inc.",
+                    ticker = "APPF",
                     price = 330.33.money()
+                ),
+                Stock(
+                    name = "Appian Corp.",
+                    ticker = "APPN",
+                    price = 271.09.money()
+                ),
+                Stock(
+                    name = "Appi Inc.",
+                    ticker = "APPI",
+                    price = 17.18.money()
                 )
             )
         )

@@ -18,3 +18,15 @@ android {
         jvmTarget = "1.8"
     }
 }
+
+dependencies {
+    implementation(project(":core:di"))
+
+    implementation(libs.appCompat)
+    implementation(libs.autoDispose)
+    implementation(libs.autoDisposeAndroidAC)
+    implementation(libs.bundles.rx)
+    implementation(libs.dagger)
+    implementation(libs.fragmentKtx)
+    implementation(libs.liveData)
+}

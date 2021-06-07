@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stock_accessibility_favourite">Add to favourites</string>
+    <string name="stock_accessibility_icon">Stock Issuer logo</string>
+</resources>

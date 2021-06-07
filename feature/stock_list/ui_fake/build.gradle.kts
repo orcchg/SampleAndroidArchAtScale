@@ -1,10 +1,13 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    id("kotlin-kapt")
 }
 
 android {
     compileSdk = 30
+
+    resourcePrefix = "stock"
 
     defaultConfig {
         minSdk = 23
@@ -17,4 +20,15 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+
+dependencies {
+    api(project(":feature:stock_list:ui"))
+
+    implementation(project(":util"))
+
+    kapt(libs.daggerCompiler)
+
+    implementation(libs.dagger)
+    implementation(libs.material)
 }
