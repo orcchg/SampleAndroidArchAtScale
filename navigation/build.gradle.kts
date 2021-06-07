@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
+//    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -17,4 +18,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+
+dependencies {
+    api(libs.navigation)
+    api(libs.navigationDynamicFeatures)
+    api(libs.navigationUi)
+
+    implementation(libs.appCompat)
 }

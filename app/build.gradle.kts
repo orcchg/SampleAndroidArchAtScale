@@ -44,6 +44,7 @@ dependencies {
     implementation(project(":core:schedulers:impl"))
     implementation(project(":feature:stock_list:data:wiring"))
     implementation(project(":feature:stock_list:impl"))
+    implementation(project(":navigation"))
 
     kapt(libs.daggerCompiler)
 
