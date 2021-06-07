@@ -1,4 +1,9 @@
 plugins {
-    id("java-library")
     id("kotlin")
+}
+
+dependencies {
+    api(project(":core:schedulers:api"))
+
+    api(libs.bundles.rx)
 }
