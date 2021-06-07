@@ -1,10 +1,13 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    id("kotlin-kapt")
 }
 
 android {
     compileSdk = 30
+
+    resourcePrefix = "stock"
 
     defaultConfig {
         applicationId = "com.orcchg.sample.atscale.stocklist.demo"
@@ -15,7 +18,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    buildFeatures {
+        viewBinding = true
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -32,4 +37,26 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+
+dependencies {
+    implementation(project(":androidUtil"))
+    implementation(project(":core:ui_core_lib"))
+    implementation(project(":feature:stock_list:fake"))
+    implementation(project(":feature:stock_list:ui_fake"))
+    implementation(project(":util"))
+    
+    kapt(libs.daggerCompiler)
+    
+    implementation(libs.appCompat)
+    implementation(libs.autoDispose)
+    implementation(libs.autoDisposeAndroidAC)
+    implementation(libs.bundles.rx)
+    implementation(libs.constraintLayout)
+    implementation(libs.coreKtx)
+    implementation(libs.dagger)
+    implementation(libs.fragmentKtx)
+    implementation(libs.material)
+    implementation(libs.recyclerView)
+    implementation(libs.timber)
 }
