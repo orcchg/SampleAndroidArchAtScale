@@ -4,8 +4,9 @@ import com.orcchg.sample.atscale.core.model.money
 import com.orcchg.sample.atscale.stocklist.api.Stock
 import com.orcchg.sample.atscale.stocklist.api.StockListInteractor
 import io.reactivex.Single
+import javax.inject.Inject
 
-class FakeStockListInteractor : StockListInteractor {
+class FakeStockListInteractor @Inject constructor() : StockListInteractor {
 
     override fun stocks(): Single<List<Stock>> =
         Single.just(

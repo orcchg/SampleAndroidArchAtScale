@@ -6,8 +6,9 @@ import com.orcchg.sample.atscale.core.schedulers.api.SchedulersFactory
 import com.orcchg.sample.atscale.stocklist.api.Stock
 import com.orcchg.sample.atscale.stocklist.data.api.StockListRepository
 import io.reactivex.Single
+import javax.inject.Inject
 
-class GetStocksUseCase(
+class GetStocksUseCase @Inject constructor(
     private val repository: StockListRepository,
     schedulersFactory: SchedulersFactory
 ) : SingleUseCase<List<Stock>>(schedulersFactory) {

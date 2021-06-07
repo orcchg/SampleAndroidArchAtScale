@@ -4,8 +4,9 @@ import com.orcchg.sample.atscale.stocklist.api.Stock
 import com.orcchg.sample.atscale.stocklist.api.StockListInteractor
 import com.orcchg.sample.atscale.stocklist.impl.domain.usecase.GetStocksUseCase
 import io.reactivex.Single
+import javax.inject.Inject
 
-class DefaultStockListInteractor(
+class DefaultStockListInteractor @Inject constructor(
     private val getStocksUseCase: GetStocksUseCase
 ) : StockListInteractor {
 

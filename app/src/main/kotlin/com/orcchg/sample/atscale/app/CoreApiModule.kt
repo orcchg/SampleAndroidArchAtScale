@@ -28,5 +28,5 @@ class CoreApiModule(private val application: Application) {
     @IntoMap
     @ClassKey(SchedulersCoreLibApi::class)
     @CoreApis
-    fun schedulerApi(): Api = DaggerSchedulersCoreLibComponent.create()
+    fun schedulersApi(): Api = DaggerSchedulersCoreLibComponent.create()
 }
