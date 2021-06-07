@@ -31,11 +31,6 @@
             <option value="$PROJECT_DIR$/feature/main" />
             <option value="$PROJECT_DIR$/feature/main/demo" />
             <option value="$PROJECT_DIR$/feature/main/ui" />
-            <option value="$PROJECT_DIR$/feature/search" />
-            <option value="$PROJECT_DIR$/feature/search/api" />
-            <option value="$PROJECT_DIR$/feature/search/demo" />
-            <option value="$PROJECT_DIR$/feature/search/impl" />
-            <option value="$PROJECT_DIR$/feature/search/ui" />
             <option value="$PROJECT_DIR$/feature/stock_details" />
             <option value="$PROJECT_DIR$/feature/stock_details/api" />
             <option value="$PROJECT_DIR$/feature/stock_details/data" />
