@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="28"
+    android:viewportHeight="28"
+    tools:ignore="VectorDrawableFillColorDetector">
+    <path
+        android:fillColor="?attr/colorSurface"
+        android:pathData="M0,14C0,6.268 6.268,0 14,0C21.732,0 28,6.268 28,14C28,21.732 21.732,28 14,28C6.268,28 0,21.732 0,14Z" />
+    <path
+        android:fillColor="?attr/colorOnSurfaceSecondary"
+        android:pathData="M11.1925,17.1925L7.6925,13.6925C7.5076,13.5053 7.2555,13.4 6.9925,13.4C6.7295,13.4 6.4774,13.5053 6.2925,13.6925C5.9025,14.0825 5.9025,14.7025 6.2925,15.0925L10.4825,19.2825C10.8725,19.6725 11.5025,19.6725 11.8925,19.2825L21.4925,9.6925C21.8825,9.3025 21.8825,8.6825 21.4925,8.2925C21.3076,8.1053 21.0555,8 20.7925,8C20.5294,8 20.2774,8.1053 20.0925,8.2925L11.1925,17.1925Z" />
+</vector>

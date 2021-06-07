@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--region Theme colors-->
+    <attr name="colorBackgroundOverlay" format="color" />
+    <attr name="colorHelperError" format="color" />
+    <attr name="colorHelperWarning" format="color" />
+    <attr name="colorSurfaceAccent" format="color" />
+    <attr name="colorSurfaceBlur" format="color" />
+
+    <attr name="colorTextButtonSecondary" format="reference" />
+
+    <attr name="colorOnAccentPrimary" format="color" />
+    <attr name="colorOnBackgroundQuaternary" format="color" />
+    <attr name="colorOnBackgroundSecondary" format="color" />
+    <attr name="colorOnBackgroundTertiary" format="color" />
+    <attr name="colorOnImagePrimary" format="color" />
+    <attr name="colorOnSurfaceSecondary" format="color" />
+    <attr name="colorOnSurfaceTertiary" format="color" />
+
+    <attr name="colorLentaQuaternaryDark" format="color" />
+    <attr name="colorLentaSecondaryDark" format="color" />
+    <attr name="colorLentaSecondaryLight" format="color" />
+    <attr name="colorLentaTertiaryLight" format="color" />
+    <attr name="colorLentaTertiaryDark" format="color" />
+
+    <attr name="colorHeart" format="color" />
+
+    <attr name="colorHelperShimmer" format="color" />
+    <!--endregion-->
+
+    <attr name="textAppearanceText" format="reference" />
+
+    <attr name="iconBackgroundColor" format="color" />
+    <attr name="iconBackgroundStrokeColor" format="color" />
+    <attr name="dividerColor" format="color" />
+
+    <declare-styleable name="CaptionButton">
+        <attr name="capBtnDrawable" format="reference" />
+        <attr name="capBtnText" format="reference|string" />
+    </declare-styleable>
+
+    <declare-styleable name="PinEditText">
+        <attr name="main_color" format="color|reference" />
+        <attr name="accent_color" format="color|reference" />
+        <attr name="box_corner_radius" format="dimension" />
+        <attr name="space_between_elements" format="dimension" />
+        <attr name="circle_radius" format="dimension" />
+        <attr name="underscore_thickness" format="dimension" />
+        <attr name="underscore_width" format="dimension" />
+        <attr name="input_mode" format="enum">
+            <enum name="sms_box" value="0" />
+            <enum name="sms_underscore" value="1" />
+            <enum name="pin" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="PinInputLayout">
+        <attr name="extraButton" format="reference" />
+        <attr name="buttonPadding" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="AspectRatioImageView">
+        <attr name="aspectRatio" format="float" />
+        <attr name="dominantMeasurement" format="enum">
+            <enum name="width" value="0" />
+            <enum name="height" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ColoredBackgroundText">
+        <attr name="contour_color" format="color|reference" />
+        <attr name="contour_corner_radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CellMediumView">
+        <attr name="cell_body_text" format="string|reference" />
+        <attr name="cell_footnote_text" format="string|reference" />
+        <attr name="cell_number" format="integer" />
+        <attr name="cell_icon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="QrCodeView">
+        <attr name="point_size" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="EllipsizeTextView">
+        <attr name="ellipsis" format="string" />
+        <attr name="lines" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ListItemSingleText">
+        <attr name="itemText" format="string|reference" />
+        <attr name="itemIconSrc" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CollapsingHeaderLayout">
+        <attr name="content" format="reference"/>
+        <attr name="contentScrim" />
+        <attr name="menu" />
+        <attr name="navigationIcon" />
+        <attr name="statusBarScrim" />
+        <attr name="title" />
+    </declare-styleable>
+
+    <declare-styleable name="CollapsingBackgroundHeaderLayout">
+        <attr name="autoStartShimmer" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableTitleTextView">
+        <attr name="android:text" />
+        <attr name="android:checked" />
+    </declare-styleable>
+</resources>

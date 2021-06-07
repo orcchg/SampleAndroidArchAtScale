@@ -18,3 +18,9 @@ android {
         jvmTarget = "1.8"
     }
 }
+
+dependencies {
+    implementation(libs.appCompat)
+    implementation(libs.coreKtx)
+    implementation(libs.material)
+}

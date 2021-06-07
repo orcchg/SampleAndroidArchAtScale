@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <public name="one_dp" type="dimen" />
+    <public name="keyline_0" type="dimen" />
+    <public name="keyline_1" type="dimen" />
+    <public name="keyline_2" type="dimen" />
+    <public name="keyline_3" type="dimen" />
+    <public name="keyline_4" type="dimen" />
+    <public name="keyline_5" type="dimen" />
+    <public name="keyline_6" type="dimen" />
+    <public name="keyline_7" type="dimen" />
+    <public name="keyline_8" type="dimen" />
+    <public name="keyline_9" type="dimen" />
+
+    <dimen name="no_dp">0dp</dimen>
+    <dimen name="one_dp">1dp</dimen>
+    <dimen name="keyline_0">2dp</dimen>
+    <dimen name="keyline_1">4dp</dimen>
+    <dimen name="keyline_2">8dp</dimen>
+    <dimen name="keyline_3">12dp</dimen>
+    <dimen name="keyline_4">16dp</dimen>
+    <dimen name="keyline_5">24dp</dimen>
+    <dimen name="keyline_6">32dp</dimen>
+    <dimen name="keyline_7">40dp</dimen>
+    <dimen name="keyline_8">48dp</dimen>
+    <dimen name="keyline_9">56dp</dimen>
+    <dimen name="keyline_10">64dp</dimen>
+    <dimen name="keyline_11">72dp</dimen>
+    <dimen name="keyline_12">80dp</dimen>
+    <dimen name="keyline_13">88dp</dimen>
+    <dimen name="keyline_14">96dp</dimen>
+    <dimen name="keyline_15">104dp</dimen>
+    <dimen name="keyline_16">112dp</dimen>
+    <dimen name="keyline_17">120dp</dimen>
+    <dimen name="keyline_18">128dp</dimen>
+    <dimen name="keyline_19">136dp</dimen>
+    <dimen name="keyline_20">144dp</dimen>
+
+    <dimen name="keyline_2.5">10dp</dimen>
+    <dimen name="keyline_4.5">20dp</dimen>
+    <dimen name="keyline_6.5">36dp</dimen>
+    <dimen name="keyline_8.5">52dp</dimen>
+</resources>
