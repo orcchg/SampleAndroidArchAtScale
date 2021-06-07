@@ -1,6 +1,8 @@
 package com.orcchg.sample.atscale.stocklist.api
 
-interface StockListFeatureApi {
+import com.orcchg.sample.atscale.di.Api
+
+interface StockListFeatureApi : Api {
 
     val interactor: StockListInteractor
 }

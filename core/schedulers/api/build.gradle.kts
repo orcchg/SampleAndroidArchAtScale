@@ -3,5 +3,7 @@ plugins {
 }
 
 dependencies {
+    api(project(":core:di"))
+
     api(libs.bundles.rx)
 }
