@@ -1,4 +1,7 @@
 plugins {
-    id("java-library")
     id("kotlin")
+}
+
+dependencies {
+    api(libs.bundles.rx)
 }
