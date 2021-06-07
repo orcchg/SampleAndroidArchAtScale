@@ -3,6 +3,8 @@ package com.orcchg.sample.atscale.app.di
 import android.app.Application
 import com.orcchg.sample.atscale.core.context.api.ContextCoreLibApi
 import com.orcchg.sample.atscale.core.context.impl.DaggerContextCoreLibComponent
+import com.orcchg.sample.atscale.core.network.api.NetworkCoreLibApi
+import com.orcchg.sample.atscale.core.network.impl.di.DaggerNetworkCoreLibComponent
 import com.orcchg.sample.atscale.core.schedulers.api.SchedulersCoreLibApi
 import com.orcchg.sample.atscale.core.schedulers.impl.di.DaggerSchedulersCoreLibComponent
 import com.orcchg.sample.atscale.di.Api
@@ -23,6 +25,12 @@ class CoreApiModule(private val application: Application) {
     @ClassKey(ContextCoreLibApi::class)
     @CoreApis
     fun contextApi(): Api = contextApi
+
+    @Provides
+    @IntoMap
+    @ClassKey(NetworkCoreLibApi::class)
+    @CoreApis
+    fun networkApi(): Api = DaggerNetworkCoreLibComponent.factory().create(contextApi)
 
     @Provides
     @IntoMap

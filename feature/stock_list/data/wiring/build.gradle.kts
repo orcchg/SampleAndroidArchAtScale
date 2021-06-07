@@ -24,6 +24,7 @@ dependencies {
     api(project(":feature:stock_list:data:api"))
 
     implementation(project(":core:context:api"))
+    implementation(project(":core:network:api"))
     implementation(project(":core:schedulers:api"))
     implementation(project(":feature:stock_list:data:fake")) // switch implementation of data layer
 

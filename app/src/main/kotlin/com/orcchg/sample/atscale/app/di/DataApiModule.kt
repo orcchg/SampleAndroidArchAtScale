@@ -20,6 +20,7 @@ object DataApiModule {
         DaggerStockListDataComponent.factory()
             .create(
                 contextCoreLibApi = coreApis.get(),
+                networkCoreLibApi = coreApis.get(),
                 schedulersCoreLibApi = coreApis.get()
             )
 }

@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -17,4 +18,20 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+
+dependencies {
+    api(project(":core:network:api"))
+
+    implementation(project(":core:context:api"))
+
+    kapt(libs.daggerCompiler)
+    kapt(libs.moshiKotlinCodegen)
+
+    implementation(libs.dagger)
+    implementation(libs.moshi)
+    implementation(libs.moshiKotlin)
+    implementation(libs.retrofit)
+    implementation(libs.retrofitMoshi)
+    implementation(libs.retrofitRx)
 }
