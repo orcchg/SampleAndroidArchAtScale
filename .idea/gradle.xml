@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/6.7.1/libexec" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/androidUtil" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/base" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/context" />
+            <option value="$PROJECT_DIR$/core/context/api" />
+            <option value="$PROJECT_DIR$/core/context/impl" />
+            <option value="$PROJECT_DIR$/core/di" />
+            <option value="$PROJECT_DIR$/core/model" />
+            <option value="$PROJECT_DIR$/core/network" />
+            <option value="$PROJECT_DIR$/core/network/api" />
+            <option value="$PROJECT_DIR$/core/network/impl" />
+            <option value="$PROJECT_DIR$/core/schedulers" />
+            <option value="$PROJECT_DIR$/core/schedulers/api" />
+            <option value="$PROJECT_DIR$/core/schedulers/impl" />
+            <option value="$PROJECT_DIR$/core/ui_core_lib" />
+            <option value="$PROJECT_DIR$/design" />
+            <option value="$PROJECT_DIR$/feature" />
+            <option value="$PROJECT_DIR$/feature/main" />
+            <option value="$PROJECT_DIR$/feature/main/demo" />
+            <option value="$PROJECT_DIR$/feature/main/ui" />
+            <option value="$PROJECT_DIR$/feature/search" />
+            <option value="$PROJECT_DIR$/feature/search/api" />
+            <option value="$PROJECT_DIR$/feature/search/demo" />
+            <option value="$PROJECT_DIR$/feature/search/impl" />
+            <option value="$PROJECT_DIR$/feature/search/ui" />
+            <option value="$PROJECT_DIR$/feature/stock_details" />
+            <option value="$PROJECT_DIR$/feature/stock_details/api" />
+            <option value="$PROJECT_DIR$/feature/stock_details/data" />
+            <option value="$PROJECT_DIR$/feature/stock_details/data/api" />
+            <option value="$PROJECT_DIR$/feature/stock_details/data/fake" />
+            <option value="$PROJECT_DIR$/feature/stock_details/data/real" />
+            <option value="$PROJECT_DIR$/feature/stock_details/data/wiring" />
+            <option value="$PROJECT_DIR$/feature/stock_details/demo" />
+            <option value="$PROJECT_DIR$/feature/stock_details/fake" />
+            <option value="$PROJECT_DIR$/feature/stock_details/impl" />
+            <option value="$PROJECT_DIR$/feature/stock_details/stock_details_main" />
+            <option value="$PROJECT_DIR$/feature/stock_details/ui" />
+            <option value="$PROJECT_DIR$/feature/stock_list" />
+            <option value="$PROJECT_DIR$/feature/stock_list/api" />
+            <option value="$PROJECT_DIR$/feature/stock_list/data" />
+            <option value="$PROJECT_DIR$/feature/stock_list/data/api" />
+            <option value="$PROJECT_DIR$/feature/stock_list/data/fake" />
+            <option value="$PROJECT_DIR$/feature/stock_list/data/real" />
+            <option value="$PROJECT_DIR$/feature/stock_list/data/wiring" />
+            <option value="$PROJECT_DIR$/feature/stock_list/demo" />
+            <option value="$PROJECT_DIR$/feature/stock_list/fake" />
+            <option value="$PROJECT_DIR$/feature/stock_list/impl" />
+            <option value="$PROJECT_DIR$/feature/stock_list/ui" />
+            <option value="$PROJECT_DIR$/feature/stock_list/ui_fake" />
+            <option value="$PROJECT_DIR$/navigation" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
