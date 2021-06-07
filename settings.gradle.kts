@@ -5,7 +5,10 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+
 rootProject.name = "SampleAndroidArchAtScale"
+
+enableFeaturePreview("VERSION_CATALOGS")
 
 include(":androidUtil")
 include(":app")
