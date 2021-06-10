@@ -69,9 +69,24 @@ data class Money(val amount: BigDecimal) {
 
         fun isZero(amount: BigDecimal): Boolean =
             amount.compareTo(BigDecimal.ZERO) == 0
+
+        fun parse(amountAndCurrency: String): Money {
+            val stub = '@'
+            val s = amountAndCurrency.indexOfFirst { it.isDigit() }
+            val e = amountAndCurrency.indexOfLast { it.isDigit() }
+            val interest = amountAndCurrency.substring(s, e + 1).replace("[,.]".toRegex(), "$stub")
+            val last = interest.indexOfLast { it == stub }
+            val balanceStr = if (last != -1) {
+                interest.replaceRange(last until last + 1, ".")
+            } else interest
+            val b = balanceStr.replace("[\\s$stub,]".toRegex(), "")
+            val balance = b.toBigDecimal()
+            return Money(amount = balance)
+        }
     }
 }
 
+fun BigDecimal.money(): Money = Money.by(this)
 fun Double.money(): Money = Money.by(this)
 
 operator fun Money.div(r: Double): Money = Money.by(amount.divide(BigDecimal.valueOf(r), 2, RoundingMode.HALF_UP))
@@ -79,7 +94,5 @@ operator fun Money.times(r: Double): Money = Money.by(amount.times(BigDecimal.va
 
 fun formatPriceChange(price: Money, change: Money): String {
     val percentage = if (price.isZero()) 0.00 else ((change * 100.0) / price).amount
-    val s = change.amount.signum()
-    val sign = if (s > 0) "+" else if (s < 0) "-" else ""
     return "$change ($percentage%)"
 }

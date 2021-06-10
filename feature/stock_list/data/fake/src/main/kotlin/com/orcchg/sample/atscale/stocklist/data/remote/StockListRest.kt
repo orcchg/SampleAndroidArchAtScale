@@ -1,4 +1,6 @@
 package com.orcchg.sample.atscale.stocklist.data.remote
 
-interface StockListRest {
-}
+/**
+ * Network adapter is not available for fake implementation of data layer.
+ */
+interface StockListRest

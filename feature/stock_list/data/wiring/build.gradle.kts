@@ -31,4 +31,5 @@ dependencies {
     kapt(libs.daggerCompiler)
 
     implementation(libs.dagger)
+    implementation(libs.room)
 }

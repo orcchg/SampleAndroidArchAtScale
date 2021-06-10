@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -22,5 +23,16 @@ android {
 dependencies {
     api(project(":feature:stock_list:data:api"))
 
+    implementation(project(":core:model"))
+    implementation(project(":util"))
+
+    kapt(libs.daggerCompiler)
+    kapt(libs.moshiKotlinCodegen)
+    kapt(libs.roomCompiler)
+
     implementation(libs.dagger)
+    implementation(libs.moshi)
+    implementation(libs.retrofit)
+    implementation(libs.room)
+    implementation(libs.roomRx)
 }

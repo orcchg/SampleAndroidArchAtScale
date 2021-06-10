@@ -17,7 +17,7 @@
             android:authorities="${applicationId}.androidx-startup"
             android:exported="false"
             tools:node="merge">
-            <meta-data android:name="com.orcchg.yandexcontest.init.TimberInitializer" android:value="androidx.startup" />
+            <meta-data android:name="com.orcchg.sample.atscale.app.init.TimberInitializer" android:value="androidx.startup" />
         </provider>
     </application>
 </manifest>
