@@ -41,7 +41,7 @@ android {
 
 dependencies {
     implementation(project(":androidUtil"))
-    implementation(project(":core:ui_core_lib"))
+    implementation(project(":core:ui"))
     implementation(project(":design"))
     implementation(project(":feature:stock_list:fake"))
     implementation(project(":feature:stock_list:ui_fake"))

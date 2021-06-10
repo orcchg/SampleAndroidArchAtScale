@@ -42,6 +42,8 @@ dependencies {
     implementation(project(":core:di"))
     implementation(project(":core:network:impl"))
     implementation(project(":core:schedulers:impl"))
+    implementation(project(":core:ui"))
+    implementation(project(":feature:main:ui"))
     implementation(project(":feature:stock_list:data:wiring"))
     implementation(project(":feature:stock_list:impl"))
     implementation(project(":navigation"))

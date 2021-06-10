@@ -7,7 +7,7 @@ import dagger.Component
 
 @Component(
     modules = [
-        FakeStockListVoConverterModule::class
+        FakeStockListVoConverterModule::class // fake bindings
     ],
     dependencies = [
         StockListFeatureApi::class

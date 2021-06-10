@@ -2,7 +2,7 @@ package com.orcchg.sample.atscale.stocklist.demo.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.orcchg.sample.atscale.core.uicorelib.AutoDisposeViewModel
+import com.orcchg.sample.atscale.core.ui.AutoDisposeViewModel
 import com.orcchg.sample.atscale.stocklist.api.StockListInteractor
 import com.orcchg.sample.atscale.stocklist.ui.convert.StockVoConverter
 import com.orcchg.sample.atscale.stocklist.ui.model.StockVO

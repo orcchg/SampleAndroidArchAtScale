@@ -1,4 +1,4 @@
-package com.orcchg.sample.atscale.core.uicorelib
+package com.orcchg.sample.atscale.core.ui
 
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment

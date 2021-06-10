@@ -1,4 +1,4 @@
-package com.orcchg.sample.atscale.core.uicorelib
+package com.orcchg.sample.atscale.core.ui
 
 import androidx.lifecycle.ViewModel
 import com.uber.autodispose.lifecycle.CorrespondingEventsFunction

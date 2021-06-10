@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_stock_request_error">Failed to get stocks\nPlease try again</string>
+    <string name="main_stock_request_error_button">Retry</string>
+</resources>
