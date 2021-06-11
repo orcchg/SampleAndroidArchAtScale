@@ -8,24 +8,24 @@ import java.util.*
 data class Money(val amount: BigDecimal) {
 
     operator fun minus(amount: BigDecimal): Money =
-        Money(amount = amount.minus(amount))
+        Money(amount = this.amount.minus(amount))
 
     operator fun minus(other: Money): Money =
         minus(other.amount)
 
     operator fun plus(amount: BigDecimal): Money =
-        Money(amount = amount.plus(amount))
+        Money(amount = this.amount.plus(amount))
 
     operator fun plus(other: Money): Money =
         plus(other.amount)
 
     operator fun div(amount: BigDecimal): Money =
-        Money(amount = amount.divide(amount, 2, RoundingMode.HALF_UP))
+        Money(amount = this.amount.divide(amount, 2, RoundingMode.HALF_UP))
 
     operator fun div(other: Money): Money = div(other.amount)
 
     operator fun times(amount: BigDecimal): Money =
-        Money(amount = amount.times(amount))
+        Money(amount = this.amount.times(amount))
 
     operator fun times(other: Money): Money = times(other.amount)
 
@@ -50,6 +50,7 @@ data class Money(val amount: BigDecimal) {
                 formatter.maximumFractionDigits = 2
                 amount
             }
+                .abs() // omit sign
 
         val signDecor = if (amount.compareTo(BigDecimal.ZERO) != 0) {
             if (amount.signum() >= 0) "" else "-"
@@ -94,5 +95,7 @@ operator fun Money.times(r: Double): Money = Money.by(amount.times(BigDecimal.va
 
 fun formatPriceChange(price: Money, change: Money): String {
     val percentage = if (price.isZero()) 0.00 else ((change * 100.0) / price).amount
-    return "$change ($percentage%)"
+    val signum = change.amount.signum()
+    val sign = if (signum > 0) "+" else ""
+    return "$sign$change ($percentage%)"
 }
