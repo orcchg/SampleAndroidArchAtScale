@@ -12,7 +12,7 @@
         android:name=".App"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SampleAndroidArchAtScale">
+        android:theme="@style/Theme.MyApp">
 
         <activity android:name=".ui.MainActivity"
             android:screenOrientation="portrait"
