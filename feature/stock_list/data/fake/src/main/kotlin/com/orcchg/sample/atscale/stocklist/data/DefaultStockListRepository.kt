@@ -23,8 +23,8 @@ class DefaultStockListRepository @Inject constructor(
         Completable.fromAction {
             val stocks = listOf(
                 StockDbo(ticker = "AAPL", name = "Apple Inc.", currentPrice = "$122.23", prevClosePrice = "$120.01", logoUrl = "https://finnhub.io/api/logo?symbol=AAPL"),
-                StockDbo(ticker = "MSFT", name = "Microsoft Corporation",currentPrice = "$230.5", prevClosePrice = "$234.72", logoUrl = "https://finnhub.io/api/logo?symbol=MSFL"),
-                StockDbo(ticker = "MA", name = "Mastercard", currentPrice = "$519.21", prevClosePrice = "$521.71", logoUrl = "https://finnhub.io/api/logo?symbol=MA"),
+                StockDbo(ticker = "MSFT", name = "Microsoft Corporation",currentPrice = "$230.5", prevClosePrice = "$234.72", logoUrl = "https://finnhub.io/api/logo?symbol=MSFT"),
+                StockDbo(ticker = "T", name = "AT & T", currentPrice = "$30.21", prevClosePrice = "$29.7", logoUrl = "https://finnhub.io/api/logo?symbol=T"),
                 StockDbo(ticker = "AMZN", name = "Amazon.com", currentPrice = "$3281.43", prevClosePrice = "$3295.14", logoUrl = "https://finnhub.io/api/logo?symbol=AMZN"),
                 StockDbo(ticker = "FB", "Facebook", currentPrice = "$281.99", prevClosePrice = "$283.11", logoUrl = "https://finnhub.io/api/logo?symbol=FB"),
                 StockDbo(ticker = "GOOGL", name = "Alphabet Class A", currentPrice = "$1890", prevClosePrice = "$1924.36", logoUrl = "https://finnhub.io/api/logo?symbol=GOOGL"),
