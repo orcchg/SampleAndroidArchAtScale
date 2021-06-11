@@ -1,5 +1,6 @@
 package com.orcchg.sample.atscale.core.network.impl.di
 
+import com.orcchg.sample.atscale.core.network.impl.interceptor.AuthHeaderInterceptor
 import com.orcchg.sample.atscale.core.network.impl.parser.BigDecimalAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -7,6 +8,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.Reusable
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -22,8 +24,20 @@ internal object NetworkCoreLibModule {
             .build()
 
     @Provides
-    fun okHttpClient(): OkHttpClient =
-        OkHttpClient.Builder().build()
+    fun loggingInterceptor(): HttpLoggingInterceptor =
+        HttpLoggingInterceptor().apply {
+            level = HttpLoggingInterceptor.Level.BODY
+        }
+
+    @Provides
+    fun okHttpClient(
+        authHeaderInterceptor: AuthHeaderInterceptor,
+        loggingInterceptor: HttpLoggingInterceptor
+    ): OkHttpClient =
+        OkHttpClient.Builder()
+            .addInterceptor(authHeaderInterceptor)
+            .addInterceptor(loggingInterceptor)
+            .build()
 
     @Provides
     @Reusable

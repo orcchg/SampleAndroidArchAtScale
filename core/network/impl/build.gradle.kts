@@ -31,6 +31,7 @@ dependencies {
     implementation(libs.dagger)
     implementation(libs.moshi)
     implementation(libs.moshiKotlin)
+    implementation(libs.okHttpLog)
     implementation(libs.retrofit)
     implementation(libs.retrofitMoshi)
     implementation(libs.retrofitRx)
