@@ -26,7 +26,7 @@ dependencies {
     implementation(project(":core:context:api"))
     implementation(project(":core:network:api"))
     implementation(project(":core:schedulers:api"))
-    implementation(project(":feature:stock_list:data:fake")) // switch implementation of data layer
+    implementation(project(":feature:stock_list:data:real")) // switch implementation of data layer
 
     kapt(libs.daggerCompiler)
 
