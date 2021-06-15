@@ -20,7 +20,7 @@ class StockDetailsViewModel @Inject constructor(
 
     private val _candles by lazy(LazyThreadSafetyMode.NONE) {
         val data = MutableLiveData<List<Candle>>()
-        candlesInternal(data, Candle.Resolution.Day, 0L, System.currentTimeMillis())
+        candlesInternal(data, Candle.Resolution.m1, 1615298999L, 1615302599)
         data
     }
     internal val candles: LiveData<List<Candle>> = _candles
