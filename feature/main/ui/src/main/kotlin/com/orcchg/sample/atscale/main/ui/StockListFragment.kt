@@ -5,6 +5,7 @@ import android.view.View
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.jakewharton.rxbinding3.view.clicks
 import com.orcchg.sample.atscale.androidutil.clickThrottle
 import com.orcchg.sample.atscale.androidutil.observe
@@ -31,6 +32,14 @@ class StockListFragment : BaseFragment(R.layout.main_stock_list_fragment) {
             .create(featureApi = api.getFeature())
             .inject(this)
         super.onViewCreated(view, savedInstanceState)
+
+        stockListAdapter.itemClickListener = {
+            findNavController()
+                .navigate(
+                    R.id.nav_action_open_stock_details,
+                    Bundle().apply { putString("ticker", it.ticker) }
+                )
+        }
 
         binding.rvItems.adapter = stockListAdapter
         binding.btnError.clicks().clickThrottle().subscribe { viewModel.retryLoadStocks() }

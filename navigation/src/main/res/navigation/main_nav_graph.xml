@@ -8,4 +8,19 @@
         android:id="@id/nav_fragment_stock_list"
         android:name="com.orcchg.sample.atscale.main.ui.StockListFragment" />
 
+    <!-- Dynamic Feature -->
+    <fragment
+        android:id="@id/nav_fragment_stock_details"
+        android:name="com.orcchg.sample.atscale.stockdetails.main.ui.StockDetailsFragment"
+        app:moduleName="stock_details_main">
+
+        <argument
+            android:name="ticker"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+    <action
+        android:id="@+id/nav_action_open_stock_details"
+        app:destination="@id/nav_fragment_stock_details" />
 </navigation>

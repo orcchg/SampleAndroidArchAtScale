@@ -30,6 +30,7 @@ dependencies {
     implementation(project(":design"))
     implementation(project(":feature:stock_list:impl"))
     implementation(project(":feature:stock_list:ui"))
+    implementation(project(":navigation"))
     implementation(project(":util"))
 
     kapt(libs.daggerCompiler)
