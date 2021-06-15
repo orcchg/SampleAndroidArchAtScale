@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stock_details_header">This is Dynamic Feature</string>
+</resources>

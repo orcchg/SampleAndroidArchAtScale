@@ -6,6 +6,7 @@ plugins {
 
 android {
     compileSdk = 30
+    resourcePrefix = "main"
 
     defaultConfig {
         minSdk = 23

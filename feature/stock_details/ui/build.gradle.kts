@@ -6,6 +6,8 @@ plugins {
 android {
     compileSdk = 30
 
+    resourcePrefix = "stock_details"
+
     defaultConfig {
         minSdk = 23
         targetSdk = 30
@@ -17,4 +19,11 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+
+dependencies {
+    implementation(project(":design"))
+
+    implementation(libs.constraintLayout)
+    implementation(libs.material)
 }

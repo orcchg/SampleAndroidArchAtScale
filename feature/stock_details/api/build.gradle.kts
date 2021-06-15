@@ -1,4 +1,12 @@
 plugins {
-    id("java-library")
     id("kotlin")
+}
+
+dependencies {
+    api(project(":core:di"))
+    api(project(":core:model"))
+
+    api(libs.bundles.rx)
+
+    implementation(libs.dagger)
 }
