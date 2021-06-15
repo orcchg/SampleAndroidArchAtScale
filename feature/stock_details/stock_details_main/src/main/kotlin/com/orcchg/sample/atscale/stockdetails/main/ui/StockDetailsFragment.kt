@@ -13,10 +13,12 @@ import com.orcchg.sample.atscale.stockdetails.main.databinding.StockDetailsFragm
 import com.orcchg.sample.atscale.stockdetails.main.di.DaggerStockDetailsFragmentComponent
 import com.orcchg.sample.atscale.stockdetails.main.viewmodel.StockDetailsViewModel
 import com.orcchg.sample.atscale.stockdetails.main.viewmodel.StockDetailsViewModelFactory
+import com.orcchg.sample.atscale.stockdetails.ui.adapter.CandleListAdapter
 import javax.inject.Inject
 
 class StockDetailsFragment : BaseFragment(R.layout.stock_details_fragment) {
 
+    @Inject lateinit var candleListAdapter: CandleListAdapter
     @Inject lateinit var factory: StockDetailsViewModelFactory
     private val ticker by argument<String>("ticker")
     private val binding by viewBindings(StockDetailsFragmentBinding::bind)
@@ -33,6 +35,10 @@ class StockDetailsFragment : BaseFragment(R.layout.stock_details_fragment) {
             .inject(this)
         super.onViewCreated(view, savedInstanceState)
 
-        observe(viewModel.candles) // TODO: show candles
+        observe(viewModel.candles, candleListAdapter::update)
+        observe(viewModel.stock) {
+            binding.tvStockName.text = it.name
+            binding.tvStockTicker.text = it.ticker
+        }
     }
 }

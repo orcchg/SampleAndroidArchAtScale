@@ -12,6 +12,9 @@ android {
         minSdk = 23
         targetSdk = 30
     }
+    buildFeatures {
+        viewBinding = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -23,7 +26,9 @@ android {
 
 dependencies {
     implementation(project(":design"))
+    implementation(project(":feature:stock_details:api"))
 
     implementation(libs.constraintLayout)
+    implementation(libs.dagger)
     implementation(libs.material)
 }

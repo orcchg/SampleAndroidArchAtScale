@@ -6,6 +6,7 @@ import com.orcchg.sample.atscale.core.ui.AutoDisposeViewModel
 import com.orcchg.sample.atscale.stockdetails.api.Candle
 import com.orcchg.sample.atscale.stockdetails.api.StockDetailsInteractor
 import com.orcchg.sample.atscale.stockdetails.api.di.Ticker
+import com.orcchg.sample.atscale.stocklist.api.Stock
 import com.orcchg.sample.atscale.stocklist.api.StockListInteractor
 import com.uber.autodispose.autoDispose
 import timber.log.Timber
@@ -23,6 +24,15 @@ class StockDetailsViewModel @Inject constructor(
         data
     }
     internal val candles: LiveData<List<Candle>> = _candles
+
+    private val _stock by lazy(LazyThreadSafetyMode.NONE) {
+        val data = MutableLiveData<Stock>()
+        stockListInteractor.stock(ticker)
+            .autoDispose(this)
+            .subscribe({ data.value = it }, Timber::e)
+        data
+    }
+    internal val stock: LiveData<Stock> = _stock
 
     private fun candlesInternal(
         data: MutableLiveData<List<Candle>>,
