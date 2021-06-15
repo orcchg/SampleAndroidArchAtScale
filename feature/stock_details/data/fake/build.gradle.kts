@@ -18,3 +18,9 @@ android {
         jvmTarget = "1.8"
     }
 }
+
+dependencies {
+    api(project(":feature:stock_details:data:api"))
+
+    implementation(libs.dagger)
+}

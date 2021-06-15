@@ -23,7 +23,10 @@ object FeatureApiModule {
         @DataApis dataApis: Map<Class<*>, @JvmSuppressWildcards Api>
     ): Api =
         DaggerStockDetailsFeatureComponent.factory()
-            .create()
+            .create(
+                schedulersCoreLibApi = coreApis.get(),
+                stockDetailsDataApi = dataApis.get()
+            )
 
     @Provides
     @IntoMap

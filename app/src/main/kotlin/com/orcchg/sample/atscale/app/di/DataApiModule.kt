@@ -2,6 +2,8 @@ package com.orcchg.sample.atscale.app.di
 
 import com.orcchg.sample.atscale.di.Api
 import com.orcchg.sample.atscale.di.get
+import com.orcchg.sample.atscale.stockdetails.data.api.StockDetailsDataApi
+import com.orcchg.sample.atscale.stockdetails.data.wiring.DaggerStockDetailsDataComponent
 import com.orcchg.sample.atscale.stocklist.data.api.StockListDataApi
 import com.orcchg.sample.atscale.stocklist.data.wiring.DaggerStockListDataComponent
 import dagger.Module
@@ -11,6 +13,17 @@ import dagger.multibindings.IntoMap
 
 @Module
 object DataApiModule {
+
+    @Provides
+    @IntoMap
+    @ClassKey(StockDetailsDataApi::class)
+    @DataApis
+    fun stockDetailsDataApi(@CoreApis coreApis: Map<Class<*>, @JvmSuppressWildcards Api>): Api =
+        DaggerStockDetailsDataComponent.factory()
+            .create(
+                networkCoreLibApi = coreApis.get(),
+                schedulersCoreLibApi = coreApis.get()
+            )
 
     @Provides
     @IntoMap
