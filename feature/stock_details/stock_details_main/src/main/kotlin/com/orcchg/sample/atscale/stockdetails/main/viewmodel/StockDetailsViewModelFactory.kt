@@ -10,5 +10,5 @@ class StockDetailsViewModelFactory @Inject constructor(
 ) : ViewModelProvider.Factory {
 
     @Suppress("Unchecked_Cast")
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T = provider.get() as T
+    override fun <T : ViewModel> create(modelClass: Class<T>): T = provider.get() as T
 }

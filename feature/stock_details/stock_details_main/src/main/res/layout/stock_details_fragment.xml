@@ -38,6 +38,7 @@
         tools:text="Apple Inc." />
 
     <com.orcchg.sample.atscale.stockdetails.ui.view.CandleListRecyclerView
+        android:id="@+id/rv_candles"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:clipToPadding="false"

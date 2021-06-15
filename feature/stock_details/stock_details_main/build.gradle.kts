@@ -12,7 +12,6 @@ android {
     defaultConfig {
         minSdk = 23
     }
-
     buildFeatures {
         viewBinding = true
     }

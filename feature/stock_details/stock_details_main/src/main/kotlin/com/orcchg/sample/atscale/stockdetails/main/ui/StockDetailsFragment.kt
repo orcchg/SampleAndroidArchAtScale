@@ -35,6 +35,8 @@ class StockDetailsFragment : BaseFragment(R.layout.stock_details_fragment) {
             .inject(this)
         super.onViewCreated(view, savedInstanceState)
 
+        binding.rvCandles.adapter = candleListAdapter
+
         observe(viewModel.candles, candleListAdapter::update)
         observe(viewModel.stock) {
             binding.tvStockName.text = it.name
