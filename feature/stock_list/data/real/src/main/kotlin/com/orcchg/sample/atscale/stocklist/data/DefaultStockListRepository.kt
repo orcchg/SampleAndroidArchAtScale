@@ -1,8 +1,6 @@
 package com.orcchg.sample.atscale.stocklist.data
 
 import android.text.format.DateUtils
-import com.orcchg.sample.atscale.stocklist.domain.Issuer
-import com.orcchg.sample.atscale.stocklist.domain.Quote
 import com.orcchg.sample.atscale.stocklist.api.Stock
 import com.orcchg.sample.atscale.stocklist.data.api.StockListRepository
 import com.orcchg.sample.atscale.stocklist.data.local.IssuerDao
@@ -12,6 +10,8 @@ import com.orcchg.sample.atscale.stocklist.data.local.convert.QuoteDboConverter
 import com.orcchg.sample.atscale.stocklist.data.remote.StockListRest
 import com.orcchg.sample.atscale.stocklist.data.remote.convert.IssuerNetworkToDboConverter
 import com.orcchg.sample.atscale.stocklist.data.remote.convert.QuoteNetworkConverter
+import com.orcchg.sample.atscale.stocklist.domain.Issuer
+import com.orcchg.sample.atscale.stocklist.domain.Quote
 import com.orcchg.sample.atscale.util.toSet
 import io.reactivex.Completable
 import io.reactivex.Maybe
@@ -35,20 +35,28 @@ class DefaultStockListRepository @Inject constructor(
         issuers()
             .flatMapObservable {
                 Observable.fromIterable(it)
-                    .concatMapSingle { issuer ->
-                        quote(issuer.ticker)
-                            .map { quote ->
-                                Stock(
-                                    ticker = issuer.ticker,
-                                    name = issuer.name,
-                                    price = quote.currentPrice,
-                                    priceDailyChange = quote.priceDayChange,
-                                    logoUrl = issuer.logoUrl
-                                )
-                            }
-                    }
+                    .concatMapSingle(::issuerToStock)
             }
             .toList()
+
+    override fun stock(ticker: String): Maybe<Stock> =
+        localIssuer(ticker)
+            .flatMap { issuer ->
+                issuerToStock(issuer)
+                    .toMaybe()
+            }
+
+    private fun issuerToStock(issuer: Issuer): Single<Stock> =
+        quote(issuer.ticker)
+            .map { quote ->
+                Stock(
+                    ticker = issuer.ticker,
+                    name = issuer.name,
+                    price = quote.currentPrice,
+                    priceDailyChange = quote.priceDayChange,
+                    logoUrl = issuer.logoUrl
+                )
+            }
 
     private fun issuers(): Single<List<Issuer>> =
         index() // load full index and retain only those issuers missing in local cache
@@ -84,6 +92,9 @@ class DefaultStockListRepository @Inject constructor(
 
     private fun localIssuers(): Single<List<Issuer>> =
         localIssuer.issuers().map(issuerLocalConverter::convertList)
+
+    private fun localIssuer(ticker: String): Maybe<Issuer> =
+        localIssuer.issuer(ticker).map(issuerLocalConverter::convert)
 
     private fun quote(ticker: String): Single<Quote> =
         quoteNetwork(ticker).toObservable()

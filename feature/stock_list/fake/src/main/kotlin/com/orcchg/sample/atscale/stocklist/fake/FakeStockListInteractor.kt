@@ -3,6 +3,7 @@ package com.orcchg.sample.atscale.stocklist.fake
 import com.orcchg.sample.atscale.core.model.money
 import com.orcchg.sample.atscale.stocklist.api.Stock
 import com.orcchg.sample.atscale.stocklist.api.StockListInteractor
+import io.reactivex.Maybe
 import io.reactivex.Single
 import javax.inject.Inject
 
@@ -66,6 +67,15 @@ class FakeStockListInteractor @Inject constructor() : StockListInteractor {
                     ticker = "APPI",
                     price = 17.18.money()
                 )
+            )
+        )
+
+    override fun stock(ticker: String): Maybe<Stock> =
+        Maybe.just(
+            Stock(
+                name = "Fake Stock",
+                ticker = ticker,
+                price = 250.51.money()
             )
         )
 }

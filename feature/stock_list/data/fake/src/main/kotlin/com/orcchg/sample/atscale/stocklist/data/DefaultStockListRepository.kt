@@ -7,6 +7,7 @@ import com.orcchg.sample.atscale.stocklist.data.local.StockDao
 import com.orcchg.sample.atscale.stocklist.data.local.convert.StockLocalConverter
 import com.orcchg.sample.atscale.stocklist.data.local.model.StockDbo
 import io.reactivex.Completable
+import io.reactivex.Maybe
 import io.reactivex.Single
 import timber.log.Timber
 import javax.inject.Inject
@@ -42,4 +43,7 @@ class DefaultStockListRepository @Inject constructor(
 
     override fun stocks(): Single<List<Stock>> =
         localStocks.stocks().map(stockLocalConverter::convertList)
+
+    override fun stock(ticker: String): Maybe<Stock> =
+        localStocks.stock(ticker).map(stockLocalConverter::convert)
 }
