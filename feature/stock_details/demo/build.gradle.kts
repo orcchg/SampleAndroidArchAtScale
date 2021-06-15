@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -15,7 +16,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    buildFeatures {
+        viewBinding = true
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -32,4 +35,27 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+
+dependencies {
+    implementation(project(":androidUtil"))
+    implementation(project(":core:ui"))
+    implementation(project(":design"))
+    implementation(project(":feature:stock_details:fake"))
+    implementation(project(":feature:stock_details:ui"))
+    implementation(project(":util"))
+
+    kapt(libs.daggerCompiler)
+
+    implementation(libs.appCompat)
+    implementation(libs.autoDispose)
+    implementation(libs.autoDisposeAndroidAC)
+    implementation(libs.bundles.rx)
+    implementation(libs.constraintLayout)
+    implementation(libs.coreKtx)
+    implementation(libs.dagger)
+    implementation(libs.fragmentKtx)
+    implementation(libs.material)
+    implementation(libs.recyclerView)
+    implementation(libs.timber)
 }
