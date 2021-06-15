@@ -6,7 +6,7 @@ import javax.inject.Inject
 import javax.inject.Provider
 
 class StockDetailsViewModelFactory @Inject constructor(
-    private val provider: Provider<StockDetailsViewModelFactory>
+    private val provider: Provider<StockDetailsViewModel>
 ) : ViewModelProvider.Factory {
 
     @Suppress("Unchecked_Cast")
