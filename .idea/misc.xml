@@ -7,7 +7,7 @@
         <entry key="design/src/main/res/drawable/rating_background.xml" value="0.12685185185185185" />
         <entry key="feature/main/ui/src/main/res/layout/main_stock_list_fragment.xml" value="0.192481884057971" />
         <entry key="feature/stock_details/demo/src/main/res/layout/stock_details_activity_demo.xml" value="0.1" />
-        <entry key="feature/stock_details/stock_details_main/src/main/res/layout/stock_details_fragment.xml" value="0.25" />
+        <entry key="feature/stock_details/stock_details_main/src/main/res/layout/stock_details_fragment.xml" value="0.1" />
         <entry key="feature/stock_details/ui/src/main/res/layout/c.xml" value="0.192481884057971" />
         <entry key="feature/stock_details/ui/src/main/res/layout/stock_details_candle_list_item.xml" value="0.335" />
         <entry key="feature/stock_details/ui/src/main/res/layout/stock_details_header_layout.xml" value="0.1" />

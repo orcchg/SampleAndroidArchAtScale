@@ -21,8 +21,10 @@ class CandleListAdapter @Inject constructor() : RecyclerView.Adapter<CandleViewH
 
     override fun getItemCount(): Int = candles.size
 
+    @Suppress("NotifyDataSetChanged")
     fun update(candles: List<Candle>) {
         this.candles.clear()
         this.candles.addAll(candles)
+        notifyDataSetChanged()
     }
 }
