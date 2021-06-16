@@ -42,4 +42,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.recyclerView)
     implementation(libs.rxBinding)
+
+    testImplementation(libs.junit)
+    testImplementation(libs.mockk)
 }

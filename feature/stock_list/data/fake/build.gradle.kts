@@ -33,4 +33,6 @@ dependencies {
     implementation(libs.room)
     implementation(libs.roomRx)
     implementation(libs.timber)
+
+    testImplementation(libs.junit)
 }
