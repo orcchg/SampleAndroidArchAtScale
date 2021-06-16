@@ -35,4 +35,6 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.room)
     implementation(libs.roomRx)
+
+    testImplementation(libs.junit)
 }
