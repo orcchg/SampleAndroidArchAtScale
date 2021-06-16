@@ -37,4 +37,5 @@ dependencies {
     implementation(libs.roomRx)
 
     testImplementation(libs.junit)
+    testImplementation(libs.mockk)
 }
