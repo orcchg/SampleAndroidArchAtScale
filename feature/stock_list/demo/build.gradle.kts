@@ -48,6 +48,7 @@ dependencies {
     implementation(project(":util"))
     
     kapt(libs.daggerCompiler)
+    kaptTest(libs.daggerCompiler)
     
     implementation(libs.appCompat)
     implementation(libs.autoDispose)
@@ -60,4 +61,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.recyclerView)
     implementation(libs.timber)
+
+    testImplementation(libs.androidCoreTesting)
+    testImplementation(libs.dagger)
+    testImplementation(libs.junit)
 }
