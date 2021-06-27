@@ -27,6 +27,7 @@
             <option value="$PROJECT_DIR$/core/schedulers" />
             <option value="$PROJECT_DIR$/core/schedulers/api" />
             <option value="$PROJECT_DIR$/core/schedulers/impl" />
+            <option value="$PROJECT_DIR$/core/testing" />
             <option value="$PROJECT_DIR$/core/ui" />
             <option value="$PROJECT_DIR$/design" />
             <option value="$PROJECT_DIR$/feature" />

@@ -62,6 +62,12 @@ dependencies {
     implementation(libs.recyclerView)
     implementation(libs.timber)
 
+    // dependencies for integration testing
+    testImplementation(project(":base"))
+    testImplementation(project(":core:testing"))
+    testImplementation(project(":feature:stock_list:impl"))
+    testImplementation(project(":feature:stock_list:data:fake"))
+
     testImplementation(libs.androidCoreTesting)
     testImplementation(libs.dagger)
     testImplementation(libs.junit)
