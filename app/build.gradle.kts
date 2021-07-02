@@ -58,6 +58,7 @@ dependencies {
     implementation(libs.dagger)
     implementation(libs.material)
     implementation(libs.timber)
+    
     testImplementation(libs.junit)
     androidTestImplementation(libs.junitAndroidExt)
     androidTestImplementation(libs.espresso)
