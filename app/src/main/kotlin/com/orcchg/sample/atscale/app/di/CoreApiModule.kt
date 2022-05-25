@@ -10,6 +10,7 @@ import com.orcchg.sample.atscale.core.schedulers.impl.di.DaggerSchedulersCoreLib
 import com.orcchg.sample.atscale.di.Api
 import dagger.Module
 import dagger.Provides
+import dagger.Reusable
 import dagger.multibindings.ClassKey
 import dagger.multibindings.IntoMap
 
@@ -21,18 +22,21 @@ class CoreApiModule(private val application: Application) {
     }
 
     @Provides
+    @Reusable
     @IntoMap
     @ClassKey(ContextCoreLibApi::class)
     @CoreApis
     fun contextApi(): Api = contextApi
 
     @Provides
+    @Reusable
     @IntoMap
     @ClassKey(NetworkCoreLibApi::class)
     @CoreApis
     fun networkApi(): Api = DaggerNetworkCoreLibComponent.factory().create(contextApi)
 
     @Provides
+    @Reusable
     @IntoMap
     @ClassKey(SchedulersCoreLibApi::class)
     @CoreApis

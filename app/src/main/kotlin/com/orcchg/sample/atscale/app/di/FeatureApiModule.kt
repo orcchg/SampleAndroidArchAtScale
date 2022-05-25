@@ -8,6 +8,7 @@ import com.orcchg.sample.atscale.stocklist.api.StockListFeatureApi
 import com.orcchg.sample.atscale.stocklist.impl.di.DaggerStockListFeatureComponent
 import dagger.Module
 import dagger.Provides
+import dagger.Reusable
 import dagger.multibindings.ClassKey
 import dagger.multibindings.IntoMap
 
@@ -15,6 +16,7 @@ import dagger.multibindings.IntoMap
 object FeatureApiModule {
 
     @Provides
+    @Reusable
     @IntoMap
     @ClassKey(StockDetailsFeatureApi::class)
     @FeatureApis
@@ -29,6 +31,7 @@ object FeatureApiModule {
             )
 
     @Provides
+    @Reusable
     @IntoMap
     @ClassKey(StockListFeatureApi::class)
     @FeatureApis

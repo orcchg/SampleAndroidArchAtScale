@@ -8,6 +8,7 @@ import com.orcchg.sample.atscale.stocklist.data.api.StockListDataApi
 import com.orcchg.sample.atscale.stocklist.data.wiring.DaggerStockListDataComponent
 import dagger.Module
 import dagger.Provides
+import dagger.Reusable
 import dagger.multibindings.ClassKey
 import dagger.multibindings.IntoMap
 
@@ -15,6 +16,7 @@ import dagger.multibindings.IntoMap
 object DataApiModule {
 
     @Provides
+    @Reusable
     @IntoMap
     @ClassKey(StockDetailsDataApi::class)
     @DataApis
@@ -26,6 +28,7 @@ object DataApiModule {
             )
 
     @Provides
+    @Reusable
     @IntoMap
     @ClassKey(StockListDataApi::class)
     @DataApis
